@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<div class="all_faculty">
+	<div class="row" id="fac_1">
+		<div class="column faculty fast">
+			<h2 class="faculty_title">Faculty of Applied Science and Textiles</h2>
+			<ul id="fast_ul">
+				<li><a>Department of Applied Biology and Chemical Technology</a></li>
+				<li><a>Department of Applied Mathematics</a></li>
+				<li><a>Department of Applied Physics</a></li>
+				<li><a>Institute of Textiles and Clothing</a></li>
+			</ul>
+		</div>
+		<div class="column faculty">
+			<h2 class="faculty_title">Faculty of Health and Social Sciences</h2>
+			<ul id=fhss_ul>
+				<li><a>Department of Applied Social Sciences</a></li>
+				<li><a>Department of Health Technology and Informatics</a></li>
+				<li><a>Department of Rehabilitation Sciences</a></li>
+				<li><a>School of Nursing</a></li>
+				<li><a>School of Optometry</a></li>
+			</ul>
+		</div>
+		<div class="column faculty fce">
+			<h2 class="faculty_title">Faculty of Construction and Environment</h2>
+			<ul id="fce_ul">
+				<li><a>Department of Building and Real Estate</a></li>
+				<li><a>Department of Building Services Engineering</a></li>
+				<li><a>Department of Civil and Environmental Engineering</a></li>
+				<li><a>Department of Land Surveying and Geo-Informatics</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row" id="fac_2">
+		<a class="column faculty">
+			<h2 class="faculty_title">School of Design</h2>
+		</a>
+		<div class="column">
+			<h2 style="text-align: center;" class="faculty_title">PolyU</h2>
+		</div>
+		<a class="column faculty">
+			<h2 class="faculty_title">School of Hotel and Tourism Management</h2>
+		</a>
+	</div>
+	<div class="row" id="fac_3">
+		<div class="column faculty fe">
+			<h2 class="faculty_title">Faculty of Engineering</h2>
+			<ul id="fe_ul">
+				<li><a>Department of Biomedical Engineering</a></li>
+				<li><a>Department of Computing</a></li>
+				<li><a>Department of Electrical Engineering</a></li>
+				<li><a>Department of Electronic and Information Engineering</a></li>
+				<li><a>Department of Industrial and Systems Engineering</a></li>
+				<li><a>Department of Mechanical Engineering</a></li>
+				<li><a>Interdisciplinary Division of Aeronautical and Aviation Engineering</a></li>
+			</ul>
+		</div>
+		<div class="column faculty">
+			<h2 class="faculty_title">Faculty of Business</h2>
+			<ul id="fb_ul">
+				<li><a>School of Accounting and Finance</a></li>
+				<li><a>Department of Logistics and Maritime Studies</a></li>
+				<li><a>Department of Management and Marketing</a></li>
+			</ul>
+		</div>
+		<div class="column faculty fh">
+			<h2 class="faculty_title">Faculty of Humanities</h2>
+			<ul id="fh_ul">
+				<li><a>Department of Chinese and Bilingual Studies</a></li>
+				<li><a>Department of Chinese Culture</a></li>
+				<li><a>Department of English</a></li>
+				<li><a>Chinese Language Centre</a></li>
+				<li><a>Confucius Institute of Hong Kong</a></li>
+				<li><a>English Language Centre</a></li>
+				<li><a>General Education Centre</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var colors=["#DAF7A6", "#F7E8BC", "#E7D9FB", "#F7F7A6", "#BCF7CF", "#F7BBA6", "#FBD9F7",  "#FBF6D9"];
+	var i=0;
+	$(".faculty").each(function () {
+		$(this).css("background-color", colors[i]);
+		$(this).find("ul").css("background-color", colors[i]);
+		i++;
+	});
+	$(".all_faculty").find("a").attr("href", document.location.origin+"/profs/");
+	$(".all_faculty").find("a").click(function() {
+		Cookies.set("department", $(this).text(), {expires: 1, path: ''});
+	});
+</script>
+</html>

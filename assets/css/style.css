@@ -1,0 +1,96 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.all_faculty {
+    margin-top: 5px;
+    border-radius: 1rem;
+}
+
+.fast {
+    border-top-left-radius: 1rem;
+}
+
+.fce {
+    border-top-right-radius: 1rem;
+}
+
+.fe {
+    border-bottom-left-radius: 1rem;
+}
+
+.fh {
+    border-bottom-right-radius: 1rem;
+}
+
+.faculty {
+	margin: 0; 
+	padding: 0;
+	text-align: center;
+    opacity: .9;
+    position: relative;
+    display: inline-block;
+}
+
+.faculty_title {
+	margin: 5px;
+}
+
+.faculty ul {
+    list-style: none;
+    text-align: left;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.faculty:hover {
+    opacity: 1;
+}
+
+.faculty:hover ul {
+    display: block;
+}
+
+.fe:hover, .fh:hover {
+    border-radius: 0;
+}
+
+.profs_info {
+    margin: 0 auto;
+}
+
+.right-bar {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    display: none;
+    bottom: 100px;
+    right: 30px;
+    text-align: center;
+    z-index:100;
+}
+
+.right-bar:a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 64px;
+}
+
+.right-bar:hover {
+    background: #CCEEFF;
+    border-radius: 5vw;
+}

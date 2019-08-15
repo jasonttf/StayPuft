@@ -1,0 +1,196 @@
+{
+  "faculty": [
+    {
+      "name": "Faculty of Applied Science and Textiles",
+      "department": [
+        {
+          "name": "Department of Applied Biology and Chemical Technology",
+          "professor": [
+            {
+              "name": "John R. Williams",
+              "email": "jrw@mit.edu",
+              "blog_url": {},
+              "image": "john-r-williams.jpg",
+              "area": [
+                "Information Technology",
+                "Cyber/Physical Security",
+                "Web-Based Educastion Technology",
+                "Large Scale Network Simulation",
+                "GeoNumerics of Granular and Powder Systems"
+              ]
+            },
+            {
+              "name": "Chan Chun Bun Henry",
+              "email": "cshchan@comp.polyu.edu.hk",
+              "blog_url": {},
+              "image": "Chan-Chun-Bun-Henry.jpg",
+              "area": [
+                "Networking and Communications",
+                "Cloud Computing",
+                "Internet Technologies",
+                "Electronic Commerce"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Department of Applied Mathematics",
+          "professor": []
+        },
+        {
+          "name": "Department of Applied Physics",
+          "professor": []
+        },
+        {
+          "name": "Institute of Textiles and Clothing",
+          "professor": []
+        }
+      ]
+    },
+    {
+      "name": "Faculty of Health and Social Sciences",
+      "department": [
+        {
+          "name": "Department of Applied Social Sciences",
+          "professor": []
+        },
+        {
+          "name": "Department of Health Technology and Informatics",
+          "professor": []
+        },
+        {
+          "name": "Department of Rehabilitation Sciences",
+          "professor": []
+        },
+        {
+          "name": "School of Nursing",
+          "professor": []
+        },
+        {
+          "name": "School of Optometry",
+          "professor": []
+        }
+      ]
+    },
+    {
+      "name": "Faculty of Construction and Environment",
+      "department": [
+        {
+          "name": "Department of Building and Real Estate",
+          "professor": []
+        },
+        {
+          "name": "Department of Building Services Engineering",
+          "professor": []
+        },
+        {
+          "name": "Department of Civil and Environmental Engineering",
+          "professor": []
+        },
+        {
+          "name": "Department of Land Surveying and Geo-Informatics",
+          "professor": []
+        }
+      ]
+    },
+    {
+      "name": "School of Design",
+      "department": [
+        {
+          "professor": []
+        }
+      ]
+    },
+    {
+      "name": "School of Hotel and Tourism Management",
+      "department": [
+        {
+          "professor": []
+        }
+      ]
+    },
+    {
+      "name": "Faculty of Engineering",
+      "department": [
+        {
+          "name": "Department of Biomedical Engineering",
+          "professor": []
+        },
+        {
+          "name": "Department of Computing",
+          "professor": []
+        },
+        {
+          "name": "Department of Electrical Engineering",
+          "professor": []
+        },
+        {
+          "name": "Department of Electronic and Information Engineering",
+          "professor": []
+        },
+        {
+          "name": "Department of Industrial and Systems Engineering",
+          "professor": []
+        },
+        {
+          "name": "Department of Mechanical Engineering",
+          "professor": []
+        },
+        {
+          "name": "Interdisciplinary Division of Aeronautical and Aviation Engineering",
+          "professor": []
+        }
+      ]
+    },
+    {
+      "name": "Faculty of Business",
+      "department": [
+        {
+          "name": "School of Accounting and Finance",
+          "professor": []
+        },
+        {
+          "name": "Department of Logistics and Maritime Studies",
+          "professor": []
+        },
+        {
+          "name": "Department of Management and Marketing",
+          "professor": []
+        }
+      ]
+    },
+    {
+      "name": "Faculty of Humanities",
+      "department": [
+        {
+          "name": "Department of Chinese and Bilingual Studies",
+          "professor": []
+        },
+        {
+          "name": "Department of Chinese Culture",
+          "professor": []
+        },
+        {
+          "name": "Department of English",
+          "professor": []
+        },
+        {
+          "name": "Chinese Language Centre",
+          "professor": []
+        },
+        {
+          "name": "Confucius Institute of Hong Kong",
+          "professor": []
+        },
+        {
+          "name": "English Language Centre",
+          "professor": []
+        },
+        {
+          "name": "General Education Centre",
+          "professor": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,83 +1,31 @@
-# StayPuft
-
-A programming-oriented theme for [Ghost](https://github.com/TryGhost/Ghost). This is the latest development version of StayPuft. If you're just looking to download the latest release, head over to the [releases](https://github.com/dlecina/StayPuft/releases) page.
-
-![screenshot-mockup](/assets/screenshots/screenshot-mockup.png?raw=true)
-
-## Features
-
-* Responsive design.
-* Custom [⚡AMP](https://blog.ghost.org/custom-amp-themes/) theme ([ℹ️](https://themes.ghost.org/docs/amp)).
-* Post comments using [Disqus](http://disqus.com/).
-* In-site search using [GhostHunter](https://github.com/i11ume/ghostHunter).
-* Support for [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
-* Syntax highlighting using [Prism](https://github.com/LeaVerou/prism/), with Markdown support.
-
-## Demo
-
-This theme is being used in my [blog](http://davidlecina.com/).
-
-*  ["Welcome to Ghost"](http://davidlecina.com/blog/welcome-to-ghost/)
-*  ["Using the Ghost editor"](http://davidlecina.com/blog/the-editor/)
-*  ["Advanced Markdown tips"](http://davidlecina.com/blog/advanced-markdown/)
-*  [Syntax highlighting demo](http://davidlecina.com/blog/prism-demo/)
-
-## Compatibility
-
-**The current StayPuft version is 2.9.3, is tested against Ghost 2.15.0 and is expected to work down to Ghost 2.0.0.**
-
-If the current version of StayPuft is not compatible with the version of Ghost you're running, try looking for an older one in the [Releases section](https://github.com/dlecina/StayPuft/releases).
-
-## Installation
-
-* Clone the repository or download the [latest release](https://github.com/dlecina/StayPuft/releases/latest) and extract it.
-* Copy `partials/custom/nav-external.hbs.example` to `partials/custom/nav-external.hbs` and customize it with your own external links.
-* (Optional) Copy `partials/custom/disqus.hbs.example` to `partials/custom/disqus.hbs` and customize it with your [Disqus shortname](https://help.disqus.com/installation/whats-a-shortname).
-* Run `yarn zip` in the theme's root directory to create `dist/StayPuft.zip`.
-* Go to your blog's Settings page (typically `/admin` or `/ghost`).
-* In the Design tab, upload and activate StayPuft.
-* (Optional) In the Code Injection tab, add any snippets you may need, such as [Google Analytics](https://help.ghost.org/article/16-google-analytics).
-
-## FAQ
-
-1. **Where should I report issues or request a new feature?**
-
-  The appropriate place to report issues or request new features is the [Issues section](https://github.com/dlecina/StayPuft/issues).
-
-2. **Where should I discuss other topics?**
-
-  To discuss other topics, please find an appropriate post in my blog's [Staypuft tag](http://davidlecina.com/blog/tag/staypuft/) and post a comment there.
-
-3. **How can I disable comments?**
-
-  To disable comments, simply remove the line `{{> "post-comments"}}` from `post.hbs` and `page.hbs`. You do not need `disqus.hbs` in this case.
-
-4. **How can I disable comments only on pages?**
-
-  To disable comments only on pages, simply remove the line `{{> "post-comments"}}` from `page.hbs`.
-
-5. **How do I use Syntax Highlighting with Markdown?**
-
-  See the [Syntax highlighting demo](http://davidlecina.com/blog/prism-demo/).
-
-## Development
-
-StayPuft styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
-
-```bash
-$ yarn install
-$ yarn dev
+# Setting up AWS EC2 server
+Go to EC2 dashboard and select launch instance.
+Choose Ubuntu Server 18.04 LTS (HVM) as the server.
+Left other settigs as default and jump to security group session.
+Setup the security group lile this:
+>photo
+Review the settings and launch the instance.
+Go to elastic IPs and select allocate newaddress.
+Associate the new IP to the instance you just launch.
+# Install Ghost on Ubuntu
+The official documents of Ghost show the details about how to install the ghost on the Ubuntu: https://ghost.org/docs/install/ubuntu/
+There are some points should be taken care of when installing the ghost:
+- Change the user of** Mysql** and set your own password.
+- Sometimes the installing of **NGINX **is unsuccessfully, and it needs to be installed again. Besides, if there are still some errors about the NGINX which  show when execute **'ghost install'**, you can modify the ***config.production.json*** in the ghost:`"host": "127.0.0.1"` to `"host": "0.0.0.0"`. But this means the fail of **reverse proxy** so that the port number '2368' have to be added when visiting the website.
+# Set up Ghost Theme
+Visit the website of ghost set before and create your account.
+## Import the theme
+Download the .zip file of ghost theme from GitHub. Upload the theme file of **'Design'** the of **Admin Page **:
+Active the theme.
+## The Setting of Integrations
+Add the custom integration, and copy the **'Content API Key'**. Change the **_ApiKey** and **ghosthunter_key** in the '>ghost>content>themes>*your theme name*>default.hbs':
+```html
+<script type="text/javascript">
+        var _ApiKey = '6e1955a96fcc6ee22faf4eaaf7';
+        var ghosthunter_key='6e1955a96fcc6ee22faf4eaaf7';
+   </script>
 ```
-
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
-
-You can keep Ghost running in your [local development environment](https://docs.ghost.org/docs/install-local) by running this from Ghost's root directory:
-
-```bash
-nodemon current/index.js --watch content/themes/StayPuft --ext hbs,js,css
-```
-
-# Copyright & License
-
-Copyright (c) 2013-2019 Ghost Foundation - Released under the [MIT license](LICENSE).  
-Copyright (c) 2014-2019 David Lecina Fuentes - Released under the [MIT license](LICENSE).  
+The **_ApiKey** is using for tag and archive page and **ghosthunter_key** is using for searching function.
+## The Page Design
+Create the **Search, Archive, Tags and Contact me **Page without any contents. Remember to set the **URL**, you can set the URL like 'you website/archives'. 
+Design the Navigation in the 'Design' as follow:
